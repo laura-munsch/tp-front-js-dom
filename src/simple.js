@@ -97,7 +97,17 @@ console.log("Table de multiplication de 5", multTable(5));
 // (jusqu'à 10 inclus) pour les nombres allant de 0 à la valeur d'un
 // paramètre max (inclus)
 function multTables(max) {
-	// votre code
+	let multiplicationTabs = [];
+
+	for (let i = 0 ; i < max + 1 ; i ++) {
+		multiplicationTabs[i] = [];
+
+		for (let j = 0 ; j < 11 ; j ++) {
+			multiplicationTabs[i].push(i * j);
+		}
+	}
+
+	return multiplicationTabs;
 }
 
 console.log(multTables(5));
@@ -123,7 +133,7 @@ const products = [
 // Vous ne devez pas créer d'objet à l'intérieur de la fonction,
 // ni utiliser de variable globale
 function howLongIsIt(obj) {
-	// votre code
+
 }
 
 // Vous devriez avoir à modifier cette ligne...
