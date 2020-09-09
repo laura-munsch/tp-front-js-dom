@@ -2,7 +2,14 @@
 // Ajoutez dans un second temps une propriété de type booléen
 // Retournez l'objet
 function createObject() {
-	// votre code
+	let table = {
+		materiau: 'bois',
+		nombreDePieds: 4,
+		taille: 'grande',
+		vivant: false
+	}
+
+	return table;
 }
 
 console.log(createObject());
@@ -12,7 +19,13 @@ console.log(createObject());
 // - absVal2: la valeur absolue du paramètre v2
 // - somme de v1 et v2
 function additionObject(v1, v2) {
-	// votre code
+	let addition = {
+		val1: v1,
+		absVal2: Math.abs(v2),
+		somme: v1 + v2
+	}
+
+	return addition;
 }
 
 console.log(additionObject(2, 6));
@@ -21,7 +34,20 @@ console.log(additionObject(-5, -10));
 // Retournez un tableau avec uniquement des nombres impairs supérieurs à 0
 // Si le tab passé en paramètre est null, retournez un tableau vide
 function removeEvenNumbers(tab) {
-	// votre code
+	if (tab != null) {
+		let newTab = [];
+
+		tab.forEach(function(item) {
+			if (item > 0 && item % 2 != 0) {
+				newTab.push(item);
+			}
+		});
+
+		return newTab;
+
+	} else {
+		return [];
+	}
 }
 
 console.log(removeEvenNumbers([]));
@@ -32,7 +58,17 @@ console.log(removeEvenNumbers([-1, 1, 2, 0, 3, 4, 12, 11]));
 // moins un élément du tableau en entrée est un nombre et
 // qu'il a une valeur négative
 function testNumNeg(tab) {
-	// votre code
+	let nombreNeg = false;
+
+	tab.forEach(function(item) {
+		if (typeof item == 'number' && item < 0) {
+			nombreNeg = true;
+		} else {
+			nombreNeg = false;
+		}
+	});
+
+	return nombreNeg;
 }
 
 console.log(testNumNeg([1, "kiwi", true, -2]));
@@ -44,7 +80,13 @@ console.log(testNumNeg([0, 4, 8]));
 // du nombre passé en paramètre, par exemple :
 // n = 5 : [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50]
 function multTable(n) {
-	// votre code
+	let multiplicationTab = [];
+
+	for (let i = 0 ; i < 11 ; i ++) {
+		multiplicationTab.push(n * i);
+	}
+
+	return multiplicationTab;
 }
 
 console.log("Table de multiplication de 1", multTable(1));
