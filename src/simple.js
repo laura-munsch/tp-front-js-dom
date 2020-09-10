@@ -130,6 +130,11 @@ const products = [
 // ni utiliser de variable globale
 function howLongIsIt(obj) {
 
+	for (let key in obj) {
+		obj[key] = obj[key].replaceAll(' ', '').length;
+	}
+
+	return obj;
 }
 
 // Vous devriez avoir à modifier cette ligne...
