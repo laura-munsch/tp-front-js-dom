@@ -158,7 +158,13 @@ console.log(newProduct0);
 // Complétez votre code avec une fonction transformant tous les objets
 // compris dans le tableau passé en paramètre de la même manière que précédemment
 function howLongIsItTab(tab) {
-	// votre code
+	tab.forEach(function(item) {
+		for (let key in item) {
+			item[key] = item[key].replaceAll(' ', '').length;
+		}
+	});
+
+	return tab;
 }
 
 // Vous devriez avoir à modifier cette ligne...
