@@ -129,7 +129,6 @@ const products = [
 // Vous ne devez pas créer d'objet à l'intérieur de la fonction,
 // ni utiliser de variable globale
 function howLongIsIt(obj) {
-
 	for (let key in obj) {
 		obj[key] = obj[key].replaceAll(' ', '').length;
 	}
@@ -138,7 +137,7 @@ function howLongIsIt(obj) {
 }
 
 // Vous devriez avoir à modifier cette ligne...
-let newProduct0 = howLongIsIt(products[0]);
+let newProduct0 = howLongIsIt(Object.create(products[0]));
 console.log(products[0]);
 /* doit afficher :
 {
