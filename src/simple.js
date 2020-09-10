@@ -99,12 +99,8 @@ console.log("Table de multiplication de 5", multTable(5));
 function multTables(max) {
 	let multiplicationTabs = [];
 
-	for (let i = 0 ; i < max + 1 ; i ++) {
-		multiplicationTabs[i] = [];
-
-		for (let j = 0 ; j < 11 ; j ++) {
-			multiplicationTabs[i].push(i * j);
-		}
+	for (let j = 0 ; j < max + 1 ; j ++) {
+		multiplicationTabs.push(multTable(j));
 	}
 
 	return multiplicationTabs;
