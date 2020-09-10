@@ -168,7 +168,7 @@ function howLongIsItTab(tab) {
 }
 
 // Vous devriez avoir à modifier cette ligne...
-let newProducts = howLongIsItTab(products);
+let newProducts = howLongIsItTab(JSON.parse(JSON.stringify(products)));
 console.log(products);
 console.log(newProducts);
 
