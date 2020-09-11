@@ -14,3 +14,13 @@ fetch('https://jsonplaceholder.typicode.com/users')
         console.log('Taille de la réponse : ' + proprietes.size + ' octets');
     });
 
+fetch('https://jsonplaceholder.typicode.com/users')
+    .then((response) => {
+        return response.json();
+    })
+    .then((valeurs) => {
+        valeurs.forEach(item => {
+            console.log(item);
+        });
+    });
+
