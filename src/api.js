@@ -6,5 +6,11 @@
 // Ajoutez au DOM une table affichant pour tous les utilisateurs
 // les valeurs des propriétés suivantes : id, nom, nom de l'entreprise
 // La table sera créée comme nouvel enfant de la div d'id workspace
-// votre code
+fetch('https://jsonplaceholder.typicode.com/users')
+    .then((response) => {
+        return response.blob();
+    })
+    .then((proprietes) => {
+        console.log('Taille de la réponse : ' + proprietes.size + ' octets');
+    });
 
