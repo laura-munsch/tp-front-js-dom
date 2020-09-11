@@ -1,33 +1,36 @@
 // Changez la couleur de fond du body en #992323
 // Ne modifiez pas le code HTML de la page directement
-// votre code
+let body = document.getElementsByTagName('body')[0];
+body.style.backgroundColor = '#992323';
 
 // Changez la couleur du texte du body en #fff
-// votre code
+body.style.color = '#fff';
 
 // Supprimez la ligne suivante
-var workspace = null;
 // Récupérez l'élément div "workspace" par son id
 // Enregistrez-le dans une variable workspace
-// votre code
+let workspace = document.getElementById('workspace');
 
 // Affichez dans la console le nombre d'éléments enfants que contient
 // l'élément workspace
-// votre code
+console.log('Workspace contient ' + workspace.childElementCount + ' enfant(s)');
 
 // Récupérez le premier paragraphe contenu dans workspace
 // vous ne devez pas ajouter d'id
 // Supprimez la ligne suivante
-var p = null;
 // Affectez le résultat à la variable p
 // votre code
+p = workspace.getElementsByTagName('p')[0];
 console.log(p);
 
 // Ajoutez le code suivant : "<h3>Hello JS world!</h3>"
 // comme enfant de workspace
 // Cet élément doit être ajouté avant le premier paragraphe
 // contenu dans workspace
-// votre code
+h3 = document.createElement('h3');
+h3Texte = document.createTextNode('Hello JS world!');
+h3.appendChild(h3Texte);
+workspace.insertBefore(h3, p);
 
 const initTime = 10;
 
@@ -35,7 +38,10 @@ const initTime = 10;
 // de n à 0, dans une div (id: counter), placée sous la balise h3 précédemment ajoutée
 // Vous ne devez pas toucher au code HTML, et le h3 doit continuer à s'afficher
 function runChrono(/* votre code */) {
-  // votre code
+  divChrono = document.createElement('div');
+  divChronoContenu = document.createTextNode(initTime);
+  divChrono.appendChild(divChronoContenu);
+  body.appendChild(divChrono);
 }
 
 console.log(runChrono(/* votre code */));
