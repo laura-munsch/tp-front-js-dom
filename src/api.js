@@ -19,8 +19,13 @@ fetch('https://jsonplaceholder.typicode.com/users')
         return response.json();
     })
     .then((valeurs) => {
+        let tableau = document.createElement('table');
+        document.getElementById('workspace').appendChild(tableau);
+
+        tableau.innerHTML = "<thead><th>id</th><th>nom</th><th>nom de l'entreprise</th></thead>"
+
         valeurs.forEach(item => {
-            console.log(item);
+            tableau.innerHTML += '<tr><td>' + item.id + '</td><td>' + item.name + '</td><td>' + item.company.name + '</td></tr>'
         });
     });
 
